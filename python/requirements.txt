@@ -134,6 +134,7 @@ cryptography==43.0.3
     #   promptflow-devkit
     #   pyjwt
     #   python-jose
+    #   secretstorage
 deprecated==1.2.14
     # via
     #   limits
@@ -180,7 +181,7 @@ flask==3.0.3
     #   flask-restx
     #   locust
     #   promptflow-core
-flask-cors==4.0.2
+flask-cors==5.0.0
     # via
     #   locust
     #   promptflow-devkit
@@ -197,7 +198,9 @@ geojson==2.5.0
 geopandas==1.0.1
     # via -r requirements.in
 gevent==24.10.3
-    # via geventhttpclient
+    # via
+    #   geventhttpclient
+    #   locust
 geventhttpclient==2.3.1
     # via locust
 gherkin-official==29.0.0
@@ -211,7 +214,9 @@ gitpython==3.1.43
 googleapis-common-protos==1.59.1
     # via opentelemetry-exporter-otlp-proto-http
 greenlet==3.1.1
-    # via gevent
+    # via
+    #   gevent
+    #   sqlalchemy
 h11==0.14.0
     # via
     #   httpcore
@@ -261,6 +266,10 @@ itsdangerous==2.2.0
     # via flask
 jaraco-classes==3.4.0
     # via keyring
+jeepney==0.8.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.1.3
     # via
     #   -r requirements.in
@@ -489,17 +498,17 @@ portalocker==2.10.1
     # via msal-extensions
 pre-commit==3.4.0
     # via -r requirements.in
-promptflow==1.16.1
+promptflow==1.17.2
     # via -r requirements.in
-promptflow-core==1.16.1
+promptflow-core==1.17.2
     # via
     #   promptflow
     #   promptflow-devkit
-promptflow-devkit==1.16.1
+promptflow-devkit==1.17.2
     # via
     #   -r requirements.in
     #   promptflow
-promptflow-tracing==1.16.1
+promptflow-tracing==1.17.2
     # via
     #   promptflow
     #   promptflow-core
@@ -531,6 +540,8 @@ pydantic==2.9.2
     #   fastapi
     #   fastapi-third-party-auth
     #   langchain
+    #   langchain-core
+    #   langsmith
     #   openai
     #   pydantic-settings
 pydantic-core==2.23.4
@@ -544,7 +555,9 @@ pyflakes==3.2.0
     #   autoflake
     #   flake8
 pyjwt[crypto]==2.9.0
-    # via msal
+    # via
+    #   msal
+    #   pyjwt
 pyogrio==0.10.0
     # via geopandas
 pyowm==3.3.0
@@ -624,6 +637,7 @@ requests[socks]==2.32.3
     #   fastapi-third-party-auth
     #   langchain
     #   langsmith
+    #   locust
     #   msal
     #   msrest
     #   opentelemetry-exporter-otlp-proto-http
@@ -652,6 +666,8 @@ scipy==1.14.1
     # via
     #   scikit-learn
     #   statsmodels
+secretstorage==3.3.3
+    # via keyring
 shapely==2.0.6
     # via geopandas
 six==1.16.0
@@ -711,6 +727,7 @@ tomli==2.0.2
     # via
     #   autoflake
     #   black
+    #   coverage
     #   locust
     #   pytest
     #   pytest-env
@@ -753,7 +770,7 @@ uvicorn==0.32.0
     #   sse-starlette
 virtualenv==20.27.1
     # via pre-commit
-waitress==2.1.2
+waitress==3.0.2
     # via promptflow-devkit
 websocket-client==1.0.0
     # via -r requirements.in
