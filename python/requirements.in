@@ -43,7 +43,7 @@ slowapi
 autoflake
 msgpack==1.0.2
 websocket-client==1.0.0
-Jinja2==3.1.3
+Jinja2==3.1.5
 backoff
 pandas
 pytest-sugar
