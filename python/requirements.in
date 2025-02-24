@@ -12,7 +12,7 @@ pyyaml>=6.0
 python-dotenv>=0.21.0
 langchain>=0.0.338
 pre-commit==3.4.0
-black==23.9.0
+black==25.1.0
 flake8
 requests>=2.31.0
 azure-monitor-opentelemetry
